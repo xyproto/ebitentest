@@ -1,0 +1,5 @@
+ebitentest
+include.txt
+*.bak
+*.swp
+*.tmp

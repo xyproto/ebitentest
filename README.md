@@ -1,2 +1,3 @@
 # ebitentest
-Trying out ebiten
+
+Trying out ebiten.
