@@ -16,7 +16,7 @@ type Dude struct {
 	jumpBlocked      bool
 	inAir            bool
 	inAirJumpCounter int
-	prevSpaceState   bool
+	prevJumpKeyState bool
 	fire             bool
 }
 
@@ -48,11 +48,11 @@ func (g *Game) UpdateDude() {
 	}
 
 	// Double jump counter
-	spaceToggled := jumpKeyDown != g.dude.prevSpaceState
+	spaceToggled := jumpKeyDown != g.dude.prevJumpKeyState
 	if g.dude.inAir && spaceToggled && jumpKeyDown {
 		g.dude.inAirJumpCounter++
 	}
-	g.dude.prevSpaceState = jumpKeyDown
+	g.dude.prevJumpKeyState = jumpKeyDown
 
 	// Are we doing the jump acceleration right now?
 
